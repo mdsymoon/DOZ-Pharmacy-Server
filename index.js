@@ -2,7 +2,6 @@ require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
-const fileUpload = require("express-fileUpload");
 const ContactModel = require("./schema/contactSchema");
 const FavoriteModel = require("./schema/favoriteSchema");
 
@@ -10,7 +9,6 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(cors());
-app.use(fileUpload());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
